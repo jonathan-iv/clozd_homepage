@@ -18,12 +18,11 @@
     --page:#F7F8F9;
     --white:#FFFFFF;
     --line:#ECEEF1;
-    /* semantic */
-    --wl:#14A6F8;     /* Win-Loss — Blue */
-    --ret:#F8C220;    /* but this is data-viz; use Yellow for Retention per spec */
-    --retention:#F4B81A; /* Retention — Yellow */
-    --impl:#00C371;   /* Implementation — Green  (marketing note: these per brand spec) */
-    --cx:#865CFF;     /* CX — Purple */
+    --wl:#14A6F8;
+    --ret:#F8C220;
+    --retention:#F4B81A;
+    --impl:#00C371;
+    --cx:#865CFF;
     --shadow: 0 10px 25px rgba(0,0,0,.12);
     --shadow-sm: 0 6px 16px rgba(0,0,0,.08);
     --grad: linear-gradient(120deg,#274FDB 0%, #14A6F8 50%, #09D4C8 100%);
@@ -32,8 +31,6 @@
   html,body{background:var(--white);color:var(--body);font-family:'Inter',system-ui,sans-serif;font-weight:400;line-height:1.5;-webkit-font-smoothing:antialiased}
   a{color:inherit;text-decoration:none}
   img{display:block;max-width:100%}
-
-  /* ---------- Layout helpers ---------- */
   .wrap{max-width:1240px;margin:0 auto;padding:0 32px}
   .eyebrow{font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:13px;color:var(--royal)}
   .eyebrow.on-dark{color:rgba(255,255,255,.9)}
@@ -45,8 +42,6 @@
   .light{font-weight:300}
   p{font-size:17px;line-height:1.55;color:var(--body)}
   .lede{font-size:19px;line-height:1.55;color:var(--body)}
-
-  /* ---------- Buttons (pills, never rectangles) ---------- */
   .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .15s ease, box-shadow .15s ease;white-space:nowrap}
   .btn-primary{background:var(--royal);color:#fff;box-shadow:0 8px 20px rgba(39,79,219,.35)}
   .btn-primary:hover{transform:translateY(-1px);box-shadow:0 12px 28px rgba(39,79,219,.45)}
@@ -56,19 +51,15 @@
   .btn-light:hover{transform:translateY(-1px)}
   .btn-link{color:var(--royal);font-weight:600;font-size:15px;display:inline-flex;align-items:center;gap:6px}
   .btn-link:hover{color:var(--blue)}
-
-  /* ---------- Nav ---------- */
   .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:saturate(180%) blur(14px)}
   .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-  .nav-logo img{height:26px}
+  .nav-logo{display:inline-flex;align-items:center;font-weight:700;font-size:22px;letter-spacing:-.02em;color:var(--royal)}
   .nav-links{display:flex;align-items:center;gap:28px}
   .nav-links a{font-weight:500;font-size:15px;color:#2a323a}
   .nav-links a:hover{color:var(--royal)}
   .nav-cta{display:flex;align-items:center;gap:14px}
   .nav-cta .btn{padding:10px 18px;font-size:14px}
   .nav-sign{color:#2a323a;font-weight:500;font-size:15px}
-
-  /* ---------- Hero (matches Figma: centered, minimal, clean gradient) ---------- */
   .hero{position:relative;overflow:hidden;color:#fff;padding:120px 0 140px;isolation:isolate;text-align:center;
     background:
       radial-gradient(ellipse at 80% 10%, rgba(9,212,200,.55), transparent 55%),
@@ -86,21 +77,15 @@
   .hero-try{display:inline-flex;align-items:center;gap:10px}
   .hero-try .spark-ai{color:#09D4C8;font-size:14px;line-height:1}
   .hero-try .beta-pill{display:inline-flex;align-items:center;height:20px;padding:0 8px;border-radius:999px;background:linear-gradient(135deg,#09D4C8,#14A6F8);color:#0B1220;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-left:2px;box-shadow:0 2px 6px rgba(9,212,200,.35)}
-
-  /* ---------- Logo row ---------- */
   .logos{padding:48px 0;background:var(--white);border-bottom:1px solid var(--line)}
   .logos .hint{text-align:center;color:var(--muted);font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-bottom:28px}
   .logos-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:40px;align-items:center;justify-items:center}
   .fakelogo{font-weight:700;color:#9aa2aa;font-size:20px;letter-spacing:-.02em;font-family:'Inter',sans-serif}
-
-  /* ---------- Generic section ---------- */
   .section{padding:120px 0}
   .section-head{max-width:1200px;margin-bottom:64px}
   .section-head .eyebrow{margin-bottom:16px;display:inline-block}
   .section-head h2{margin-bottom:18px;max-width:920px}
   .section-head .lede{max-width:1180px}
-
-  /* ---------- Decision Intelligence: value + outcomes bento ---------- */
   .di{position:relative;overflow:hidden;background:#fff}
   .di::before{
     content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
@@ -116,36 +101,33 @@
   .di-head .di-emph::before,.di-head .di-emph::after{color:var(--teal);font-style:normal;font-weight:600}
   .di-head .lede{font-size:20px;line-height:1.55;margin-top:22px;max-width:1180px}
   .di-head .lede strong{color:var(--ink);font-weight:600}
-
-  .di-outcomes-label{display:inline-flex;align-items:center;gap:14px;margin-top:64px;margin-bottom:20px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--royal)}
-  .di-outcomes-label .dash{display:inline-block;width:40px;height:2px;background:linear-gradient(90deg,var(--teal),var(--royal));border-radius:999px}
-
+  .di-subhead{margin-top:72px;margin-bottom:32px}
+  .di-subtitle{font-size:34px;line-height:1.1;letter-spacing:-.015em;font-weight:600;color:var(--ink)}
   .di-bento{display:grid;grid-template-columns:1.55fr 1fr;gap:22px;align-items:stretch;min-height:540px}
-
-  /* Featured outcome card */
   .of{position:relative;overflow:hidden;border-radius:24px;padding:44px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:var(--shadow-sm);transition:background .3s ease}
   .of::before{content:"";position:absolute;top:-80px;right:-80px;width:340px;height:340px;border-radius:999px;background:radial-gradient(circle, rgba(9,212,200,.32), transparent 65%);pointer-events:none}
   .of::after{content:"";position:absolute;bottom:-100px;left:-100px;width:340px;height:340px;border-radius:999px;background:radial-gradient(circle, rgba(39,79,219,.18), transparent 65%);pointer-events:none}
   .of>*{position:relative;z-index:1}
-  .of-tag{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;background:rgba(9,212,200,.22);color:#0A7A72;font-weight:600;font-size:12px;letter-spacing:.1em;text-transform:uppercase;align-self:flex-start}
-  .of-middle{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:end;margin-top:24px}
-  .of-num{font-size:104px;font-weight:600;color:var(--ink);letter-spacing:-.05em;line-height:.95}
-  .of-num .unit{font-size:60px;color:var(--royal);margin-left:4px}
-  .of-desc{font-size:16px;color:var(--body);margin-top:14px;line-height:1.45;max-width:380px}
-
-  /* Media slot: video (square) or custom visual artifact */
+  .of-tag{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:999px;background:rgba(9,212,200,.22);color:#0A7A72;font-weight:700;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;align-self:flex-start}
+  .of-middle{display:grid;grid-template-columns:1.3fr 1fr;gap:36px;align-items:center;margin-top:28px}
+  .of-text{display:flex;flex-direction:column;justify-content:center}
+  .of-desc{font-size:30px;line-height:1.22;color:var(--ink);font-weight:500;letter-spacing:-.018em;margin:0}
+  .of-desc strong{font-weight:700;background:linear-gradient(135deg,#274FDB 0%, #14A6F8 50%, #09D4C8 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;letter-spacing:-.022em}
   .of-media{min-height:280px;display:flex;align-items:center;justify-content:center;width:100%}
   .of-media .video-wrap{position:relative;width:100%;max-width:300px;aspect-ratio:1/1;border-radius:18px;overflow:hidden;box-shadow:0 18px 40px rgba(15,35,80,.28);background:#0B1220}
   .of-media .video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-
-  /* Shared insight-card wrapper for the three non-video visuals */
+  .of-media .video-placeholder{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1F3FB8 0%,#274FDB 50%,#0E6FB8 100%)}
+  .of-media .video-placeholder::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 25% 20%,rgba(9,212,200,.4),transparent 60%),radial-gradient(circle at 80% 85%,rgba(20,166,248,.35),transparent 55%);pointer-events:none}
+  .of-media .video-placeholder .vp-play{width:64px;height:64px;border-radius:18px;background:rgba(255,255,255,.96);color:var(--royal);display:flex;align-items:center;justify-content:center;box-shadow:0 14px 30px rgba(0,10,40,.4);position:relative;z-index:1;transition:transform .2s ease}
+  .of-media .video-placeholder:hover .vp-play{transform:scale(1.05)}
+  .of-media .video-placeholder .vp-play svg{width:24px;height:24px;margin-left:3px}
+  .of-media .video-placeholder .vp-foot{position:absolute;left:14px;right:14px;bottom:14px;display:flex;justify-content:space-between;align-items:center;color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;z-index:1}
+  .of-media .video-placeholder .vp-soon{padding:4px 9px;border-radius:999px;background:rgba(255,255,255,.16);font-size:9.5px;backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.18)}
   .viz{width:100%;max-width:340px;background:linear-gradient(180deg,#F7FAFF 0%,#ECF3FE 100%);border-radius:18px;padding:20px 22px;box-shadow:0 12px 28px rgba(20,40,90,.08);display:flex;flex-direction:column;gap:14px;position:relative;overflow:hidden}
   .viz::after{content:"";position:absolute;right:-30px;top:-30px;width:120px;height:120px;border-radius:999px;background:radial-gradient(circle,rgba(9,212,200,.18),transparent 70%);pointer-events:none}
   .viz-head{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--royal);display:flex;align-items:center;gap:8px;position:relative;z-index:1}
   .viz-head .dot{width:6px;height:6px;border-radius:999px;background:linear-gradient(135deg,#09D4C8,#14A6F8)}
   .viz>*{position:relative;z-index:1}
-
-  /* Zoovu — conversion funnel */
   .viz-funnel .stages{display:flex;flex-direction:column;gap:8px}
   .viz-funnel .stage{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;border-radius:999px;font-weight:700;font-size:13px;letter-spacing:-.01em;transition:all .2s}
   .viz-funnel .stage.s1{width:100%;background:rgba(39,79,219,.1);color:var(--royal)}
@@ -154,8 +136,6 @@
   .viz-funnel .stage.s4{width:40%;background:linear-gradient(90deg,#14A6F8 0%,#09D4C8 100%);color:#fff;box-shadow:0 8px 18px rgba(9,212,200,.35)}
   .viz-funnel .lift{align-self:flex-start;display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;background:rgba(9,212,200,.22);color:#0A7A72;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-top:4px}
   .viz-funnel .lift .arrow{font-size:10px}
-
-  /* Optro — ranked win drivers */
   .viz-drivers .rows{display:flex;flex-direction:column;gap:11px}
   .viz-drivers .row{display:grid;grid-template-columns:92px 1fr 34px;align-items:center;gap:10px;font-size:12px;color:var(--body)}
   .viz-drivers .t{font-weight:600;color:var(--ink);font-size:12.5px}
@@ -163,21 +143,16 @@
   .viz-drivers .fill{height:100%;border-radius:999px;background:linear-gradient(90deg,#14A6F8 0%,#09D4C8 100%)}
   .viz-drivers .row.dim .fill{background:linear-gradient(90deg,#B8C8E8 0%,#8FA3CC 100%)}
   .viz-drivers .v{text-align:right;font-weight:700;color:var(--ink);font-size:12px}
-
-  /* Clearbit — retention trend */
   .viz-trend{padding-bottom:14px}
   .viz-trend svg{width:100%;height:auto;display:block;margin-top:4px}
   .viz-trend .trend-foot{display:flex;justify-content:space-between;align-items:center;font-size:10.5px;color:var(--body);font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-top:4px}
   .viz-trend .trend-foot .delta{color:#0A7A72;background:rgba(9,212,200,.22);padding:3px 8px;border-radius:999px;letter-spacing:.06em}
-
   .of-logo{display:flex;align-items:center;gap:16px;padding-top:28px;margin-top:28px;border-top:1px solid rgba(39,79,219,.16)}
   .of-logo .mark{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,#09D4C8,#14A6F8);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:22px;box-shadow:0 8px 18px rgba(9,212,200,.3);transition:background .3s ease}
   .of-logo .meta{flex:1}
   .of-logo .name{font-size:22px;font-weight:700;color:var(--ink);letter-spacing:-.02em;line-height:1.1}
   .of-logo .co{font-size:13px;color:var(--body);margin-top:3px}
   .of-logo .link{font-weight:600;color:var(--royal);font-size:14px;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
-
-  /* Story nav (4 clickable cards) */
   .of-stack{display:flex;flex-direction:column;gap:14px}
   .os{position:relative;background:#fff;border:none;border-radius:18px;padding:20px 22px;box-shadow:var(--shadow-sm);flex:1;display:flex;flex-direction:column;justify-content:center;overflow:hidden;min-height:0;cursor:pointer;text-align:left;font-family:inherit;transition:transform .15s ease, box-shadow .15s ease, background .2s ease;color:inherit}
   .os:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,.09)}
@@ -195,27 +170,21 @@
   .os .cust .dot{width:14px;height:14px;border-radius:4px}
   .os .arrow{opacity:0;color:var(--royal);font-weight:700;font-size:18px;transition:opacity .2s ease, transform .2s ease}
   .os:hover .arrow{opacity:.5}
-
-  /* Active story */
   .os.os-active{background:linear-gradient(135deg,#F4FAFF 0%, #EAF5FF 100%);box-shadow:0 14px 32px rgba(39,79,219,.14)}
   .os.os-active::before{opacity:1;width:5px}
   .os.os-active .label{color:var(--royal)}
   .os.os-active .arrow{opacity:1;transform:translateX(2px)}
-
-  /* ---------- How we collect feedback (Live / Flex / Flow) ---------- */
   .collect{background:#fff;position:relative;overflow:hidden}
   .collect::before{content:"";position:absolute;top:-160px;right:-200px;width:520px;height:520px;border-radius:999px;background:radial-gradient(circle,rgba(9,212,200,.12),transparent 65%);pointer-events:none}
   .collect-head{max-width:1200px}
   .collect-head h2{font-size:44px;line-height:1.1;letter-spacing:-.015em;max-width:900px}
   .collect-head .lede{font-size:18px;line-height:1.55;margin-top:16px;max-width:1180px}
   .collect-grid{display:grid;grid-template-columns:1fr 2.1fr;gap:24px;align-items:stretch;margin-top:48px}
-
   .cc{background:#fff;border-radius:20px;padding:30px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden;height:100%}
   .cc-header{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;row-gap:8px}
   .cc-tag{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--royal);display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
   .cc-tag .sq{width:10px;height:10px;border-radius:3px}
   .cc-tag .beta-chip{display:inline-flex;align-items:center;height:20px;padding:0 9px;border-radius:999px;background:linear-gradient(135deg,#09D4C8,#14A6F8);color:#0B1220;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-left:4px;box-shadow:0 2px 6px rgba(9,212,200,.35)}
-  /* "Try it yourself" interactive CTA chip — live pulsing pill that links to an interview */
   .cc-header-right{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;row-gap:6px}
   .try-chip{display:inline-flex;align-items:center;gap:7px;height:28px;padding:0 12px 0 11px;border-radius:999px;background:linear-gradient(135deg,#09D4C8,#14A6F8);color:#052626;font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;box-shadow:0 4px 14px rgba(9,212,200,.38);transition:transform .15s ease, box-shadow .15s ease;white-space:nowrap}
   .try-chip:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(9,212,200,.5)}
@@ -232,13 +201,9 @@
   .cc-meta{list-style:none;padding:0;margin:auto 0 0;display:flex;flex-direction:column;gap:7px;padding-top:10px;border-top:0}
   .cc-meta li{font-size:12.5px;color:var(--body);padding-left:18px;position:relative;line-height:1.4}
   .cc-meta li::before{content:"";position:absolute;left:0;top:7px;width:6px;height:6px;border-radius:999px;background:var(--teal)}
-
-  /* Video-style viz panels for all three interview types */
   .cc-viz{border-radius:14px;padding:14px;min-height:220px;position:relative;overflow:hidden;background:#0C162E;display:flex;flex-direction:column;gap:12px}
   .cc-viz::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 0%, rgba(20,166,248,.22), transparent 55%), radial-gradient(circle at 100% 100%, rgba(9,212,200,.16), transparent 55%);pointer-events:none}
   .cc-viz>*{position:relative;z-index:1}
-
-  /* Top bar (above video tiles) */
   .vbar{display:flex;align-items:center;gap:8px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.82)}
   .vbar .rec{display:inline-flex;align-items:center;gap:6px;color:#FF6B6B}
   .vbar .rec .rdot{width:7px;height:7px;border-radius:999px;background:#FF6B6B;box-shadow:0 0 0 0 rgba(255,107,107,.6);animation:pulse 1.6s infinite}
@@ -246,8 +211,6 @@
   .vbar .live .ldot{width:7px;height:7px;border-radius:999px;background:#09D4C8;animation:pulse 1.6s infinite}
   .vbar .time{margin-left:auto;font-family:"SFMono-Regular","Monaco",monospace;color:rgba(255,255,255,.65);letter-spacing:.04em}
   .vbar .chip{display:inline-flex;align-items:center;gap:6px;padding:3px 8px;border-radius:999px;background:rgba(255,255,255,.12);color:rgba(255,255,255,.9);font-weight:700;letter-spacing:.08em}
-
-  /* Video tiles grid */
   .vtiles{display:grid;grid-template-columns:1fr 1fr;gap:8px}
   .vtile{aspect-ratio:4/3;border-radius:10px;position:relative;overflow:hidden}
   .vtile.tall{aspect-ratio:1/1.05}
@@ -261,24 +224,17 @@
   .vtile .mic{position:absolute;bottom:6px;right:6px;width:20px;height:20px;border-radius:999px;background:rgba(9,212,200,.9);display:flex;align-items:center;justify-content:center;color:#052626;font-size:10px;font-weight:700}
   .vtile.active-speaker{box-shadow:0 0 0 2px #09D4C8}
   .vtile .corner-chip{position:absolute;top:6px;right:6px;padding:2px 7px;border-radius:999px;background:rgba(255,255,255,.18);color:#fff;font-size:9px;font-weight:700;letter-spacing:.08em}
-
-  /* AI Agent avatar tile (not a person — a glowing orb) */
   .vtile.ai-tile{background:radial-gradient(circle at 50% 50%, rgba(20,166,248,.9) 0%, rgba(39,79,219,.7) 40%, rgba(14,22,46,1) 90%)}
   .vtile.ai-tile .orb{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
   .vtile.ai-tile .orb svg{width:60%;height:auto;filter:drop-shadow(0 0 14px rgba(9,212,200,.6))}
   .vtile.ai-tile .pulse-ring{position:absolute;left:50%;top:50%;width:70%;height:70%;border-radius:999px;border:1px solid rgba(9,212,200,.55);transform:translate(-50%,-50%);animation:ring 2.6s ease-out infinite}
   .vtile.ai-tile .pulse-ring.r2{animation-delay:.9s}
-
   @keyframes ring{0%{transform:translate(-50%,-50%) scale(.6);opacity:.9}100%{transform:translate(-50%,-50%) scale(1.35);opacity:0}}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
-
-  /* Transcript strip below tiles */
   .vstrip{padding:8px 10px;background:rgba(255,255,255,.08);border-radius:10px;color:rgba(255,255,255,.95);font-size:12px;line-height:1.4;backdrop-filter:blur(4px);display:flex;gap:8px;align-items:flex-start}
   .vstrip .who{font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#09D4C8;flex-shrink:0;padding-top:1px;min-width:34px}
   .vstrip .who.human{color:#9DC6FF}
   .vstrip .txt{color:rgba(255,255,255,.92);font-size:11.5px;line-height:1.4;flex:1}
-
-  /* Flex-specific: single large video with answer thumbnail below (Q→A→AI) */
   .vplayer{position:relative;aspect-ratio:16/10;border-radius:10px;overflow:hidden;background:#0F1A33}
   .vplayer .person{position:absolute;inset:0}
   .vplayer .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:42px;height:42px;border-radius:999px;background:rgba(255,255,255,.9);display:flex;align-items:center;justify-content:center;color:#0F1A33;font-size:14px;box-shadow:0 6px 18px rgba(0,0,0,.35)}
@@ -287,8 +243,6 @@
   .vplayer .pip{position:absolute;bottom:8px;right:8px;width:64px;aspect-ratio:4/3;border-radius:7px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,.5);border:2px solid rgba(255,255,255,.4)}
   .vplayer .pip .person{background:radial-gradient(circle at 50% 36%, #E6BEA0 0%, #E6BEA0 22%, transparent 24%), linear-gradient(180deg,#4A8BA8 0%, #2B6986 100%)}
   .vplayer .pip::after{content:"YOU";position:absolute;top:2px;left:4px;color:#fff;font-size:8px;font-weight:700;letter-spacing:.1em;text-shadow:0 1px 2px rgba(0,0,0,.6)}
-
-  /* AI listening indicator for Flex */
   .ai-listen{display:flex;align-items:center;gap:10px;padding:8px 12px;background:linear-gradient(135deg,rgba(39,79,219,.35),rgba(9,212,200,.3));border-radius:10px;color:#fff;font-size:11px;font-weight:600}
   .ai-listen .chip-ai{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:7px;background:linear-gradient(135deg,#14A6F8,#09D4C8);color:#052626;font-weight:800;font-size:10px;letter-spacing:.06em}
   .ai-listen .wave{display:flex;align-items:center;gap:2px;margin-left:auto;height:14px}
@@ -300,8 +254,6 @@
   .ai-listen .wave span:nth-child(5){height:40%;animation-delay:.4s}
   .ai-listen .wave span:nth-child(6){height:70%;animation-delay:.5s}
   @keyframes waveb{0%,100%{transform:scaleY(.6)}50%{transform:scaleY(1)}}
-
-  /* AI group — wraps Flex + Flow */
   .ai-group{position:relative;border-radius:26px;padding:80px 24px 24px;
     background:
       radial-gradient(circle at 0% 0%, rgba(9,212,200,.16), transparent 55%),
@@ -311,8 +263,6 @@
   .ai-label{position:absolute;top:22px;left:50%;transform:translateX(-50%);display:inline-flex;align-items:center;gap:12px;padding:12px 22px 12px 14px;border-radius:999px;background:#fff;color:var(--royal);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 10px 24px rgba(39,79,219,.16);white-space:nowrap}
   .ai-label .spark-box{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:10px;background:linear-gradient(135deg,#274FDB,#09D4C8);color:#fff;font-size:14px;font-weight:700;box-shadow:0 4px 10px rgba(9,212,200,.35)}
   .ai-pair{display:grid;grid-template-columns:1fr 1fr;gap:18px;height:100%}
-
-  /* ---------- Customer journey (6 moments, vertical timeline) ---------- */
   .journey{background:#fff;position:relative;overflow:hidden;padding:120px 0 80px}
   .journey::before{content:"";position:absolute;top:-120px;left:-180px;width:520px;height:520px;border-radius:999px;background:radial-gradient(circle,rgba(9,212,200,.1),transparent 65%);pointer-events:none}
   .journey::after{content:"";position:absolute;bottom:-120px;right:-180px;width:520px;height:520px;border-radius:999px;background:radial-gradient(circle,rgba(39,79,219,.1),transparent 65%);pointer-events:none}
@@ -320,42 +270,34 @@
   .journey-head h2{font-size:48px;line-height:1.08;letter-spacing:-.015em;max-width:960px}
   .journey-head .lede{font-size:18px;line-height:1.55;margin-top:16px;max-width:1180px}
   .journey-head .lede .em{color:var(--royal);font-weight:600}
-
-  /* Per-moment color themes (shared by tabs + panels) */
   .m-market{--grad-a:#09D4C8;--grad-b:#14A6F8}
   .m-buying{--grad-a:#14A6F8;--grad-b:#274FDB}
   .m-implementation{--grad-a:#00B56B;--grad-b:#00D4A8}
   .m-product-dec{--grad-a:#274FDB;--grad-b:#1A2FA0}
   .m-adoption{--grad-a:#7A4BFF;--grad-b:#B88AFF}
   .m-renewal{--grad-a:#F4B81A;--grad-b:#F59E0B}
-
-  /* Horizontal timeline tabs */
   .journey-rail{position:relative;max-width:1200px;margin:56px auto 0;padding:0 24px}
   .journey-tabs{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;position:relative;padding-top:64px}
-  .journey-tabs::before{content:"";position:absolute;top:24px;left:8%;right:8%;height:3px;background:linear-gradient(90deg,#09D4C8 0%,#14A6F8 18%,#00B56B 38%,#274FDB 58%,#7A4BFF 78%,#F4B81A 100%);border-radius:999px;opacity:.5}
+  .journey-tabs::before{content:"";position:absolute;top:24px;left:8%;right:8%;height:3px;background:linear-gradient(90deg,#14A6F8 0%, #00B56B 22%, #7A4BFF 42%, #F4B81A 60%, #09D4C8 80%, #1A2FA0 100%);border-radius:999px;opacity:.5}
   .jt{position:relative;display:flex;flex-direction:column;align-items:center;gap:10px;background:none;border:0;cursor:pointer;padding:0 4px;color:var(--body);text-align:center;font-family:inherit;transition:transform .18s ease}
   .jt:hover{transform:translateY(-1px)}
-  .jt .jt-num{position:absolute;top:-58px;left:50%;transform:translateX(-50%);width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:#fff;box-shadow:0 0 0 4px #fff, 0 8px 18px rgba(39,79,219,.14);z-index:3;transition:all .2s ease;overflow:hidden}
-  .jt .jt-num img{width:24px;height:24px;transition:filter .2s ease, opacity .2s ease;filter:brightness(0) saturate(100%) invert(22%) sepia(82%) saturate(3265%) hue-rotate(225deg) brightness(96%) contrast(93%);opacity:.85}
+  .jt .jt-num{position:absolute;top:-58px;left:50%;transform:translateX(-50%);width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:#fff;box-shadow:0 0 0 4px #fff, 0 8px 18px rgba(39,79,219,.14);z-index:3;transition:all .2s ease;overflow:hidden;color:var(--royal)}
+  .jt .jt-num svg{width:24px;height:24px;transition:color .2s ease}
   .jt:hover .jt-num{transform:translateX(-50%) translateY(-2px);box-shadow:0 0 0 4px #fff, 0 12px 22px rgba(39,79,219,.22)}
-  .jt:hover .jt-num img{opacity:1}
-  .jt.active .jt-num{background:linear-gradient(135deg,var(--grad-a,#274FDB),var(--grad-b,#09D4C8));box-shadow:0 0 0 4px #fff, 0 12px 24px rgba(39,79,219,.32)}
-  .jt.active .jt-num img{filter:brightness(0) invert(1);opacity:1}
+  .jt.active .jt-num{background:linear-gradient(135deg,var(--grad-a,#274FDB),var(--grad-b,#09D4C8));box-shadow:0 0 0 4px #fff, 0 12px 24px rgba(39,79,219,.32);color:#fff}
   .jt .jt-idx{display:inline-flex;align-items:center;justify-content:center;font-size:10.5px;font-weight:800;letter-spacing:.14em;color:var(--royal);opacity:.55;margin-top:0;text-transform:uppercase;line-height:1;transition:opacity .2s ease}
   .jt.active .jt-idx{opacity:1;color:var(--royal)}
   .jt .jt-label{font-size:12.5px;font-weight:600;letter-spacing:.02em;color:var(--body);opacity:.65;line-height:1.3;margin-top:4px}
-  .jt.active .jt-num{color:#fff;width:52px;height:52px;top:-58px;font-size:14px;background:linear-gradient(135deg,var(--grad-a,#274FDB),var(--grad-b,#09D4C8));box-shadow:0 0 0 4px #fff, 0 14px 28px rgba(39,79,219,.3)}
+  .jt.active .jt-num{width:52px;height:52px;top:-58px}
   .jt.active .jt-label{color:var(--ink);opacity:1;font-weight:700}
-
-  /* Expandable panel */
   .journey-panels{position:relative;max-width:1200px;margin:48px auto 0;padding:0 24px}
   .jp{display:none;grid-template-columns:1.1fr 1fr;gap:48px;align-items:stretch;background:#fff;border-radius:24px;box-shadow:0 24px 60px rgba(20,40,90,.09), 0 6px 14px rgba(20,40,90,.04);padding:48px 48px;position:relative;overflow:hidden}
   .jp::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--grad-a,#274FDB),var(--grad-b,#09D4C8))}
   .jp.active{display:grid;animation:jpIn .35s ease}
   @keyframes jpIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
   .jp-text{display:flex;flex-direction:column;gap:14px;justify-content:center}
-  .jp-icon{width:60px;height:60px;border-radius:16px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--grad-a,#274FDB),var(--grad-b,#09D4C8));box-shadow:0 10px 22px rgba(39,79,219,.22)}
-  .jp-icon img{width:34px;height:34px;filter:brightness(0) invert(1);opacity:.95}
+  .jp-icon{width:60px;height:60px;border-radius:16px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--grad-a,#274FDB),var(--grad-b,#09D4C8));box-shadow:0 10px 22px rgba(39,79,219,.22);color:#fff}
+  .jp-icon svg{width:30px;height:30px}
   .jp-eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--grad-a,#274FDB);margin-top:2px}
   .jp h3{font-size:30px;line-height:1.16;letter-spacing:-.02em;margin:0;color:var(--ink);font-weight:600}
   .jp-text p{font-size:15.5px;color:var(--body);line-height:1.55;margin:0}
@@ -364,8 +306,6 @@
   .jp-link:hover .arrow{transform:translateX(3px)}
   .jp.m-renewal .jp-eyebrow, .jp.m-renewal .jp-link{color:#B78814}
   .jp.m-implementation .jp-eyebrow, .jp.m-implementation .jp-link{color:#009B5E}
-
-  /* Visual side — product logo variant */
   .jp-visual{border-radius:20px;background:linear-gradient(160deg,rgba(39,79,219,.04),rgba(9,212,200,.07));padding:36px 32px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:18px;position:relative;overflow:hidden;min-height:300px}
   .jp-visual::after{content:"";position:absolute;right:-70px;bottom:-70px;width:260px;height:260px;border-radius:999px;background:radial-gradient(circle,rgba(39,79,219,.08),transparent 70%);pointer-events:none}
   .jp.m-market .jp-visual::after{background:radial-gradient(circle,rgba(9,212,200,.14),transparent 70%)}
@@ -374,41 +314,35 @@
   .jp.m-renewal .jp-visual::after{background:radial-gradient(circle,rgba(244,184,26,.14),transparent 70%)}
   .jp-product-tag, .cc-badge{font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grad-a,#274FDB);padding:6px 12px;border-radius:999px;background:#fff;box-shadow:0 4px 10px rgba(39,79,219,.08);position:relative;z-index:1}
   .jp-product-wordmark{display:flex;align-items:center;gap:16px;position:relative;z-index:1}
-  .jp-product-logo{width:86px;height:86px;object-fit:contain;flex:0 0 86px;filter:drop-shadow(0 8px 18px rgba(20,40,90,.12))}
+  .jp-product-logo{width:86px;height:86px;border-radius:22px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:44px;letter-spacing:-.02em;flex:0 0 86px;box-shadow:0 8px 18px rgba(20,40,90,.16)}
+  .jp.m-buying .jp-product-logo{background:linear-gradient(135deg,#14A6F8,#09D4C8)}
+  .jp.m-implementation .jp-product-logo{background:linear-gradient(135deg,#00B56B,#00D4A8)}
+  .jp.m-adoption .jp-product-logo{background:linear-gradient(135deg,#7A4BFF,#B88AFF)}
+  .jp.m-renewal .jp-product-logo{background:linear-gradient(135deg,#F4B81A,#F59E0B)}
+  .jp.m-market .jp-product-logo{background:linear-gradient(135deg,#09D4C8,#14A6F8)}
+  .jp.m-product-dec .jp-product-logo{background:linear-gradient(135deg,#274FDB,#1A2FA0)}
+  .jp-product-logo.mono-2{font-size:34px;letter-spacing:-.03em}
   .jp-product-name{display:flex;flex-direction:column;gap:2px}
   .jp-product-name .jp-pn-lockup{font-size:13px;font-weight:600;color:var(--body);letter-spacing:.02em;text-transform:uppercase;opacity:.7;line-height:1}
   .jp-product-name .jp-pn-title{font-size:22px;font-weight:700;color:var(--ink);letter-spacing:-.015em;line-height:1.1}
   .jp-product-sub, .cc-sub{font-size:13.5px;color:var(--body);line-height:1.5;margin:0;max-width:380px;position:relative;z-index:1}
-
-  /* Visual side — cross-cutting variant */
-  .cc-icon{width:72px;height:72px;border-radius:18px;background:linear-gradient(135deg,var(--grad-a,#274FDB),var(--grad-b,#09D4C8));display:flex;align-items:center;justify-content:center;box-shadow:0 12px 24px rgba(39,79,219,.22);position:relative;z-index:1}
-  .cc-icon img{width:40px;height:40px;filter:brightness(0) invert(1)}
+  .cc-icon{width:72px;height:72px;border-radius:18px;background:linear-gradient(135deg,var(--grad-a,#274FDB),var(--grad-b,#09D4C8));display:flex;align-items:center;justify-content:center;box-shadow:0 12px 24px rgba(39,79,219,.22);position:relative;z-index:1;color:#fff}
+  .cc-icon svg{width:38px;height:38px}
   .cc-label{font-size:17px;font-weight:700;color:var(--ink);letter-spacing:-.01em;position:relative;z-index:1}
-
-  /* ---------- Social proof strip ---------- */
-  .proof{margin-top:96px;position:relative;z-index:1}
-  .proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1140px;margin:0 auto}
-  .proof-card{background:#fff;border-radius:20px;padding:30px 28px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden}
-  .proof-card::before{content:"";position:absolute;top:-40px;right:-40px;width:120px;height:120px;border-radius:999px;background:radial-gradient(circle,rgba(9,212,200,.14),transparent 70%)}
-  .proof-card>*{position:relative;z-index:1}
-  .proof-card .big{font-size:44px;font-weight:600;color:var(--royal);letter-spacing:-.025em;line-height:1}
-  .proof-card .big .plus{font-size:28px;color:var(--teal);margin-left:2px}
-  .proof-card .lbl{font-size:13.5px;color:var(--body);line-height:1.4}
-  .proof-card .stars{display:inline-flex;gap:2px;color:#F4B81A;font-size:14px;letter-spacing:.05em;line-height:1}
-  .proof-card .tag{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;background:rgba(39,79,219,.08);color:var(--royal);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;align-self:flex-start}
-
-  /* ---------- Engine (3-step how it works) ---------- */
-  .engine{background:var(--page)}
-  .engine-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  .step{background:#fff;border-radius:20px;padding:36px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:18px;position:relative}
-  .step .num{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:999px;background:linear-gradient(135deg,var(--royal),var(--blue));color:#fff;font-weight:600;font-size:14px}
-  .step h3{font-size:22px}
-  .step img{height:64px;width:auto;object-fit:contain}
-  .step ul{list-style:none;padding:0;margin-top:8px}
-  .step li{font-size:15px;color:var(--body);padding-left:22px;position:relative;margin-top:8px;line-height:1.45}
-  .step li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:999px;background:var(--teal)}
-
-  /* ---------- Product suite ---------- */
+  /* G2 section */
+  .g2{background:var(--page);padding:96px 0}
+  .g2-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center;max-width:1140px;margin:0 auto}
+  .g2-left h2{font-size:38px;line-height:1.1;letter-spacing:-.015em;margin-top:6px}
+  .g2-left .lede{max-width:480px}
+  .g2-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px 6px 6px;border-radius:999px;background:#FF492C;color:#fff;font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:24px}
+  .g2-mark{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:999px;background:#fff;color:#FF492C;font-size:12px;font-weight:800;letter-spacing:-.04em}
+  .g2-quote-card{background:#fff;border-radius:24px;padding:40px;box-shadow:0 14px 40px rgba(20,40,90,.08);position:relative}
+  .g2-quote-card .g2-stars{color:#F4B81A;font-size:18px;letter-spacing:.04em;margin-bottom:16px}
+  .g2-quote-card blockquote{font-size:18px;line-height:1.5;color:var(--ink);font-weight:500;margin:0}
+  .g2-attr{display:flex;align-items:center;gap:14px;margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+  .g2-avatar{width:44px;height:44px;border-radius:999px;background:linear-gradient(135deg,#274FDB,#09D4C8);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:13px;flex-shrink:0}
+  .g2-name{font-weight:700;color:var(--ink);font-size:14px;line-height:1.2}
+  .g2-role{font-size:12.5px;color:var(--body);margin-top:2px;line-height:1.3}
   .products{background:#fff}
   .prod-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
   .prod{border-radius:20px;padding:40px;color:#fff;position:relative;overflow:hidden;min-height:260px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:var(--shadow-sm)}
@@ -422,14 +356,6 @@
   .prod.ret{background:linear-gradient(135deg,#F4B81A 0%, #F59E0B 100%)}
   .prod.impl{background:linear-gradient(135deg,#00B56B 0%, #00D4A8 100%)}
   .prod.cx{background:linear-gradient(135deg,#7A4BFF 0%, #B88AFF 100%)}
-
-  /* ---------- Outcomes (stats + featured quote) ---------- */
-  /* Standalone social proof section */
-  .proof-section{background:#fff;padding:110px 0 120px;position:relative;overflow:hidden}
-  .proof-section::before{content:"";position:absolute;top:-160px;left:50%;transform:translateX(-50%);width:720px;height:720px;border-radius:999px;background:radial-gradient(circle,rgba(39,79,219,.05),transparent 65%);pointer-events:none}
-  .proof-section .section-head{position:relative;z-index:1}
-  .proof-section .proof-grid{position:relative;z-index:1}
-
   .outcomes{background:var(--page);position:relative;overflow:hidden}
   .outcomes .grid{display:grid;grid-template-columns:1fr 1.3fr;gap:40px}
   .stat-stack{display:flex;flex-direction:column;gap:20px}
@@ -446,8 +372,6 @@
   .quote-card .avatar{width:52px;height:52px;border-radius:999px;background:linear-gradient(135deg,#274FDB,#09D4C8);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600}
   .quote-card .who .name{font-weight:600;color:var(--ink);font-size:15px}
   .quote-card .who .role{font-size:14px;color:var(--body);margin-top:2px}
-
-  /* ---------- Personas ---------- */
   .personas{position:relative;color:#fff;overflow:hidden;padding:120px 0;isolation:isolate;
     background:
       radial-gradient(circle at 100% 0%, rgba(9,212,200,.45), transparent 50%),
@@ -456,26 +380,26 @@
   }
   .personas h2{color:#fff}
   .personas .lede{color:rgba(255,255,255,.88)}
-
-  /* Persona video reel */
-  .reel{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:56px;position:relative;z-index:1}
-  .vclip{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:9/14;background:#0F2FB3;box-shadow:0 24px 50px rgba(0,20,60,.32);cursor:pointer;isolation:isolate;transition:transform .22s ease, box-shadow .22s ease}
+  .reel{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px;position:relative;z-index:1;max-width:1080px;margin-left:auto;margin-right:auto}
+  .vclip .vhead{position:absolute;top:0;left:0;right:0;padding:18px 18px 36px;z-index:2;color:#fff;display:flex;flex-direction:column;gap:12px;pointer-events:none}
+  .vclip .vhead::before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(180deg,rgba(6,16,46,.62) 0%, rgba(6,16,46,.32) 55%, rgba(6,16,46,0) 100%);z-index:-1;pointer-events:none;border-radius:22px 22px 0 0}
+  .vclip .vchip{display:inline-flex;align-items:center;align-self:flex-start;padding:5px 11px;border-radius:999px;background:rgba(255,255,255,.96);color:var(--royal);font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;box-shadow:0 4px 10px rgba(0,10,40,.2)}
+  .vclip .vhead-line{font-size:14.5px;line-height:1.36;color:#fff;font-weight:600;letter-spacing:-.005em;margin:0;text-shadow:0 1px 6px rgba(0,10,40,.5);max-width:96%}
+  .vclip .vplay{top:62%}
+  .vbox-cap .vbchip{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:999px;background:linear-gradient(135deg,#09D4C8,#14A6F8);color:#052626;font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+  .vclip{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:9/14;background:#0F2FB3;box-shadow:0 24px 50px rgba(0,20,60,.32);cursor:pointer;isolation:isolate;transition:transform .22s ease, box-shadow .22s ease;border:0;padding:0;font-family:inherit}
   .vclip:hover{transform:translateY(-3px);box-shadow:0 30px 60px rgba(0,20,60,.42)}
-  /* Blue gradient backdrop per role (subtle variation within blue family) */
   .vclip.cro,.vbox-video.cro{background:linear-gradient(180deg,#274FDB 0%, #1E3FB8 45%, #14A6F8 100%)}
   .vclip.cmo,.vbox-video.cmo{background:linear-gradient(180deg,#1A3FB5 0%, #2966D6 50%, #4BB0E8 100%)}
   .vclip.cs,.vbox-video.cs{background:linear-gradient(180deg,#15378F 0%, #1F58C8 50%, #09D4C8 100%)}
   .vclip.pmm,.vbox-video.pmm{background:linear-gradient(180deg,#2A4AD0 0%, #3A6EE0 50%, #5FC0F8 100%)}
-  /* B&W portrait placeholder — sits in the upper portion, leaving room for footer */
   .vclip .vposter{position:absolute;left:0;right:0;top:0;bottom:90px;z-index:0;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
   .vclip .vportrait{width:88%;max-width:240px;height:98%;filter:grayscale(1) contrast(1.06) brightness(1.04);opacity:.95}
-  /* Play button: small square with white triangle, centered on the portrait */
   .vclip .vplay{position:absolute;left:50%;top:calc(50% - 45px);transform:translate(-50%,-50%);width:46px;height:46px;border-radius:10px;background:rgba(255,255,255,.98);color:var(--royal);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(5,15,50,.45);transition:transform .2s ease;z-index:3}
   .vclip .vplay svg{width:16px;height:16px;margin-left:2px}
   .vclip:hover .vplay{transform:translate(-50%,-50%) scale(1.06)}
-  /* Bottom white footer "card" — name/role on left, company wordmark on right */
   .vclip .vfoot{position:absolute;left:14px;right:14px;bottom:14px;background:#fff;border-radius:14px;padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:10px;z-index:2;box-shadow:0 10px 24px rgba(0,10,40,.22)}
-  .vclip .vleft{min-width:0;flex:1 1 auto}
+  .vclip .vleft{min-width:0;flex:1 1 auto;text-align:left}
   .vclip .vname{font-size:13px;font-weight:700;color:#0C1436;line-height:1.15;letter-spacing:-.005em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .vclip .vrole{display:block;font-size:10.5px;color:#5C6785;line-height:1.2;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-transform:none;letter-spacing:0;background:none;padding:0;backdrop-filter:none}
   .vclip .vlogo{flex-shrink:0;font-weight:800;font-size:13px;letter-spacing:.01em;line-height:1;display:inline-flex;align-items:center}
@@ -486,8 +410,6 @@
   .vclip .vlogo.reputation::before{content:"";display:inline-block;width:7px;height:7px;background:#E73138;border-radius:999px;margin-right:6px}
   .vclip .vlogo.auditboard{color:#0E1B3A;font-weight:800;letter-spacing:-.005em}
   .vclip .vlogo.auditboard::before{content:"";display:inline-block;width:12px;height:12px;border:2px solid #00B8A9;border-radius:3px;margin-right:5px;box-sizing:border-box}
-
-  /* Lightbox modal */
   .vbox{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(8,14,34,.82);backdrop-filter:blur(8px);padding:32px}
   .vbox.open{display:flex;animation:vboxIn .18s ease}
   @keyframes vboxIn{from{opacity:0}to{opacity:1}}
@@ -511,8 +433,6 @@
   .vbox-cap .vblogo.auditboard::before{content:"";display:inline-block;width:12px;height:12px;border:2px solid #09D4C8;border-radius:3px;margin-right:5px;box-sizing:border-box}
   .vbox-close{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:999px;background:rgba(255,255,255,.12);color:#fff;border:0;display:flex;align-items:center;justify-content:center;cursor:pointer;backdrop-filter:blur(8px);z-index:3}
   .vbox-close:hover{background:rgba(255,255,255,.22)}
-
-  /* ---------- Customer story ---------- */
   .story{background:#fff}
   .story-card{background:var(--page);border-radius:28px;padding:56px;display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center;position:relative;overflow:hidden}
   .story-card::before{content:"";position:absolute;top:-80px;left:-80px;width:260px;height:260px;border-radius:999px;background:radial-gradient(circle, rgba(39,79,219,.12), transparent 70%)}
@@ -527,8 +447,6 @@
   .story-stats .stat .num{font-size:32px;font-weight:600;color:var(--royal);letter-spacing:-.02em;line-height:1}
   .story-stats .stat .num.teal{color:var(--teal)}
   .story-stats .stat .lbl{font-size:13px;color:var(--body);margin-top:8px;line-height:1.4}
-
-  /* ---------- Final CTA ---------- */
   .cta-final{padding:80px 0 120px;background:#fff}
   .cta-card{border-radius:28px;padding:72px;position:relative;overflow:hidden;color:#fff;text-align:left;isolation:isolate;
     background:
@@ -538,8 +456,6 @@
   .cta-card h2{color:#fff;max-width:680px}
   .cta-card p{color:rgba(255,255,255,.9);max-width:540px;margin-top:14px;font-size:18px}
   .cta-card .btns{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
-
-  /* ---------- Footer ---------- */
   footer{background:#0B1220;color:rgba(255,255,255,.75);padding:72px 0 32px}
   footer .top{display:grid;grid-template-columns:1.3fr 3fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.08)}
   footer .tagline{color:rgba(255,255,255,.65);font-size:15px;margin-top:18px;max-width:320px;line-height:1.55}
@@ -550,20 +466,16 @@
   footer li a{font-size:14px;color:rgba(255,255,255,.7)}
   footer li a:hover{color:#fff}
   footer .bottom{display:flex;justify-content:space-between;align-items:center;padding-top:28px;font-size:13px;color:rgba(255,255,255,.5)}
-  footer .foot-logo{height:22px;filter:brightness(0) invert(1);opacity:.9}
-
-  /* ---------- Utilities ---------- */
+  footer .foot-logo{font-weight:700;font-size:20px;letter-spacing:-.02em;color:#fff;opacity:.95}
   .pill{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:rgba(39,79,219,.08);color:var(--royal);font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
   .sep{height:1px;background:var(--line);margin:0}
-
-  /* ---------- Responsive  ---------- */
   @media (max-width: 1100px){
     h1{font-size:52px}
     h2{font-size:34px}
     .hero{padding:80px 0 100px}
     .hero-visual{display:none}
     .thesis .grid,.outcomes .grid,.story-card{grid-template-columns:1fr}
-    .engine-grid,.persona-grid,.prod-grid,.di-bento,.collect-grid,.ai-pair,.proof-grid,.reel{grid-template-columns:1fr}
+    .prod-grid,.di-bento,.collect-grid,.ai-pair,.reel,.g2-grid{grid-template-columns:1fr}
     .journey-tabs{grid-template-columns:repeat(3,1fr);row-gap:48px;padding-top:56px}
     .journey-tabs::before{display:none}
     .jp{grid-template-columns:1fr;gap:28px;padding:32px 28px}
@@ -582,11 +494,45 @@
 </style>
 </head>
 <body>
+<!-- Inline icon set, used by reference -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-magnet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 4v8a7 7 0 0 0 14 0V4"/>
+    <path d="M5 4h4M15 4h4M5 10h4M15 10h4"/>
+  </symbol>
+  <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <circle cx="12" cy="12" r="10"/>
+    <circle cx="12" cy="12" r="6"/>
+    <circle cx="12" cy="12" r="2" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-rocket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 2c4 3 6 7 6 11l-3 3-3-3-3 3-3-3c0-4 2-8 6-11z"/>
+    <circle cx="12" cy="10" r="2" fill="currentColor"/>
+    <path d="M9 19l-2 3M15 19l2 3"/>
+  </symbol>
+  <symbol id="i-streamline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+    <path d="M3 6h12M3 12h18M3 18h10"/>
+    <circle cx="18" cy="6" r="2" fill="currentColor"/>
+    <circle cx="14" cy="18" r="2" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-growth" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 17l6-6 4 4 8-8"/>
+    <polyline points="14 7 21 7 21 14"/>
+  </symbol>
+  <symbol id="i-direction" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"/>
+    <polygon points="16 8 10 14 8 16 14 10" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-research" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+    <circle cx="11" cy="11" r="7"/>
+    <line x1="16" y1="16" x2="21" y2="21"/>
+  </symbol>
+</svg>
 
 <!-- ============== NAV ============== -->
 <div class="nav">
   <div class="wrap nav-inner">
-    <a class="nav-logo" href="#"><img src="assets/logos/clozd-logo.svg" alt="Clozd" /></a>
+    <a class="nav-logo" href="#">clozd</a>
     <nav class="nav-links">
       <a href="#">Platform</a>
       <a href="#">Products</a>
@@ -635,22 +581,19 @@
 <section class="section di">
   <div class="wrap">
     <div class="di-head">
-      <h2>Understand the <span class="di-emph">&lsquo;why&rsquo;</span> behind every customer decision</h2>
-      <p class="lede">We call this <strong>Decision Intelligence</strong> — the practice of systematically capturing direct, first-party customer feedback to uncover what really drives conversion, retention, and growth. Teams running it continuously see the numbers below.</p>
+      <h2>Uncover the <span class="di-emph">why</span> behind every customer decision</h2>
+      <p class="lede">We call this <strong>Decision Intelligence</strong>&mdash;capturing real customer feedback to understand what drives conversion, retention, and growth. Teams that do it consistently see the results below.</p>
     </div>
-
-    <div class="di-outcomes-label">
-      <span class="dash"></span>
-      <span>Outcomes from real Clozd customers</span>
+    <div class="di-subhead">
+      <span class="eyebrow" style="display:block;margin-bottom:10px">Outcomes &amp; social proof</span>
+      <h3 class="di-subtitle">Real customers. Real outcomes.</h3>
     </div>
-
     <div class="di-bento">
       <article class="of" id="featuredCard">
-        <span class="of-tag" id="ofTag">Featured outcome · Win-back pipeline</span>
+        <span class="of-tag" id="ofTag">Win back revenue</span>
         <div class="of-middle">
-          <div>
-            <div class="of-num"><span id="ofStat">60</span><span class="unit" id="ofUnit">%</span></div>
-            <p class="of-desc" id="ofDesc">of closed-lost deals re-qualified as genuine win-back opportunities after Decision Intelligence surfaced the real reasons buyers went another direction</p>
+          <div class="of-text">
+            <p class="of-desc" id="ofDesc">StackAdapt&rsquo;s revenue team found that <strong>60%</strong> of their loss interviews included clear signals for future re-engagement.</p>
           </div>
           <div class="of-media" id="ofMedia">
             <div class="video-wrap">
@@ -667,11 +610,10 @@
           <a class="link" href="#">Watch the story <span>&rarr;</span></a>
         </div>
       </article>
-
       <div class="of-stack" role="tablist" aria-label="Customer stories">
         <button class="os os-active" data-story="stackadapt" type="button" role="tab" aria-selected="true">
           <div class="os-inner">
-            <div class="label">Win-back pipeline</div>
+            <div class="label">Win back revenue</div>
             <div class="os-row">
               <div class="num">60%</div>
               <span class="arrow">&rarr;</span>
@@ -681,7 +623,7 @@
         </button>
         <button class="os" data-story="zoovu" type="button" role="tab" aria-selected="false">
           <div class="os-inner">
-            <div class="label">Stronger conversion</div>
+            <div class="label">Boost conversion rate</div>
             <div class="os-row">
               <div class="num">2.5&times;</div>
               <span class="arrow">&rarr;</span>
@@ -691,9 +633,9 @@
         </button>
         <button class="os" data-story="optro" type="button" role="tab" aria-selected="false">
           <div class="os-inner">
-            <div class="label">Better win rate</div>
+            <div class="label">Increase win rate</div>
             <div class="os-row">
-              <div class="num">+5%</div>
+              <div class="num">+5pts</div>
               <span class="arrow">&rarr;</span>
             </div>
             <div class="cust"><span class="dot" style="background:linear-gradient(135deg,#14A6F8,#274FDB)"></span>Optro</div>
@@ -701,7 +643,7 @@
         </button>
         <button class="os" data-story="clearbit" type="button" role="tab" aria-selected="false">
           <div class="os-inner">
-            <div class="label">Higher retention</div>
+            <div class="label">Retain more customers</div>
             <div class="os-row">
               <div class="num">+10%</div>
               <span class="arrow">&rarr;</span>
@@ -714,24 +656,22 @@
   </div>
 </section>
 
-<!-- ============== HOW WE COLLECT FEEDBACK (Live / Flex / Flow) ============== -->
+<!-- ============== HOW WE COLLECT FEEDBACK ============== -->
 <section class="section collect">
   <div class="wrap">
     <div class="collect-head">
-      <span class="eyebrow">How we collect feedback</span>
-      <h2 style="margin-top:14px">Three ways to get to the <span class="light">&lsquo;why&rsquo;</span></h2>
-      <p class="lede">Match the depth to the deal. From senior researchers running white-glove interviews on your most strategic accounts, to autonomous AI agents listening across every pipeline stage &mdash; Clozd fits the listening to the learning you need.</p>
+      <span class="eyebrow">How we collect rich feedback</span>
+      <h2 style="margin-top:14px">Three ways to get to the <span class="light">&ldquo;why&rdquo;</span> behind every customer decision</h2>
+      <p class="lede">From expert-led interviews to fully autonomous AI, Clozd gives you the ability to capture in-depth, honest customer conversations at scale.</p>
     </div>
-
     <div class="collect-grid">
-      <!-- LIVE -->
       <article class="cc cc-live">
         <div class="cc-header">
           <span class="cc-tag"><span class="sq" style="background:linear-gradient(135deg,#09D4C8,#14A6F8)"></span>Live Interviews</span>
           <span class="cc-kind cc-kind-live">Expert-led</span>
         </div>
-        <h3>Senior researchers lead the conversation</h3>
-        <p>A seasoned Clozd interviewer runs a 30&ndash;45 minute conversation with your buyer &mdash; probing exactly where the decision turned.</p>
+        <h3>Senior consultants lead the conversation</h3>
+        <p>A seasoned Clozd interviewer runs a 30-minute conversation with your buyer&mdash;exploring the real reasons behind their final decision.</p>
         <div class="cc-viz">
           <div class="vbar">
             <span class="rec"><span class="rdot"></span>REC</span>
@@ -760,16 +700,12 @@
           <li>Recorded, transcribed, and coded by Clozd</li>
         </ul>
       </article>
-
-      <!-- AI-POWERED GROUP -->
       <div class="ai-group">
         <div class="ai-label">
           <span class="spark-box">&#x2726;</span>
           Powered by the Clozd AI Interviewer
         </div>
-
         <div class="ai-pair">
-          <!-- FLEX -->
           <article class="cc cc-flex">
             <div class="cc-header">
               <span class="cc-tag"><span class="sq" style="background:linear-gradient(135deg,#14A6F8,#274FDB)"></span>Flex Interviews</span>
@@ -778,8 +714,8 @@
                 <span class="cc-kind cc-kind-ai"><span class="spark">&#x2726;</span>AI-assisted</span>
               </span>
             </div>
-            <h3>Your questions. AI-driven follow-ups.</h3>
-            <p>Buyers answer your pre-recorded prompts on their own schedule. Our AI listens in real time and asks the sharp follow-up that uncovers the real &lsquo;why&rsquo;.</p>
+            <h3>Your questions + AI-driven follow-ups</h3>
+            <p>Buyers respond to your pre-recorded prompts on their own schedule, while Clozd AI listens and asks helpful follow-ups to paint a complete picture of the decision-making process.</p>
             <div class="cc-viz">
               <div class="vbar">
                 <span class="chip">PRE-RECORDED Q</span>
@@ -802,15 +738,13 @@
               <li>Buyer-paced &middot; completes in 10&ndash;15 min</li>
             </ul>
           </article>
-
-          <!-- FLOW -->
           <article class="cc cc-flow">
             <div class="cc-header">
               <span class="cc-tag"><span class="sq" style="background:linear-gradient(135deg,#274FDB,#09D4C8)"></span>Flow Interviews<span class="beta-chip">Beta</span></span>
               <span class="cc-kind cc-kind-ai"><span class="spark">&#x2726;</span>Fully autonomous</span>
             </div>
-            <h3>An AI agent runs the full interview</h3>
-            <p>The Clozd AI agent handles the conversation end-to-end &mdash; adaptive, voice-native, and available 24/7, so you can listen at the speed of your pipeline.</p>
+            <h3>Clozd&rsquo;s AI agent runs the full interview</h3>
+            <p>Our AI agent&mdash;adaptive, voice-native, and available 24/7&mdash;handles the conversation from start to finish, giving you an efficient way to scale powerful insights.</p>
             <div class="cc-viz">
               <div class="vbar">
                 <span class="live"><span class="ldot"></span>LIVE</span>
@@ -860,81 +794,61 @@
   </div>
 </section>
 
-<!-- ============== CUSTOMER JOURNEY (6 moments, horizontal) ============== -->
+<!-- ============== CUSTOMER JOURNEY ============== -->
 <section class="section journey">
   <div class="wrap">
     <div class="journey-head">
-      <span class="eyebrow">Decision Intelligence across the journey</span>
-      <h2 style="margin-top:14px">Customer decisions happen across the <span class="light">entire journey</span></h2>
-      <p class="lede">Clozd captures decision intelligence at every decisive moment &mdash; from the first time a buyer evaluates your category to the decision to renew and grow. <span class="em">One system of customer truth.</span></p>
+      <span class="eyebrow">Decisions across the customer journey</span>
+      <h2 style="margin-top:14px">Decision Intelligence at <span class="light">key customer touchpoints</span></h2>
+      <p class="lede">Clozd captures candid feedback at every decisive moment&mdash;from the first time a buyer evaluates your category through onboarding, renewal, and expansion.</p>
     </div>
-
     <div class="journey-rail">
       <div class="journey-tabs" role="tablist" aria-label="Moments in the customer journey">
-        <button class="jt m-market" data-moment="market" type="button" role="tab" aria-selected="false">
-          <span class="jt-num"><img src="assets/icons/Magnet.png" alt="" /></span>
+        <button class="jt active m-buying" data-moment="winloss" type="button" role="tab" aria-selected="true">
+          <span class="jt-num"><svg><use href="#i-target"/></svg></span>
           <span class="jt-idx">01</span>
-          <span class="jt-label">Market evaluation</span>
-        </button>
-        <button class="jt active m-buying" data-moment="buying" type="button" role="tab" aria-selected="true">
-          <span class="jt-num"><img src="assets/icons/Target.png" alt="" /></span>
-          <span class="jt-idx">02</span>
-          <span class="jt-label">Buying decisions</span>
+          <span class="jt-label">Win-loss analysis</span>
         </button>
         <button class="jt m-implementation" data-moment="implementation" type="button" role="tab" aria-selected="false">
-          <span class="jt-num"><img src="assets/icons/Rocketship.png" alt="" /></span>
+          <span class="jt-num"><svg><use href="#i-rocket"/></svg></span>
+          <span class="jt-idx">02</span>
+          <span class="jt-label">Implementation feedback</span>
+        </button>
+        <button class="jt m-adoption" data-moment="cx" type="button" role="tab" aria-selected="false">
+          <span class="jt-num"><svg><use href="#i-growth"/></svg></span>
           <span class="jt-idx">03</span>
-          <span class="jt-label">Implementation</span>
+          <span class="jt-label">CX check-ins</span>
+        </button>
+        <button class="jt m-renewal" data-moment="churn" type="button" role="tab" aria-selected="false">
+          <span class="jt-num"><svg><use href="#i-direction"/></svg></span>
+          <span class="jt-idx">04</span>
+          <span class="jt-label">Churn interviews</span>
+        </button>
+        <button class="jt m-market" data-moment="market" type="button" role="tab" aria-selected="false">
+          <span class="jt-num"><svg><use href="#i-magnet"/></svg></span>
+          <span class="jt-idx">05</span>
+          <span class="jt-label">Market research</span>
         </button>
         <button class="jt m-product-dec" data-moment="product" type="button" role="tab" aria-selected="false">
-          <span class="jt-num"><img src="assets/icons/Streamline.png" alt="" /></span>
-          <span class="jt-idx">04</span>
-          <span class="jt-label">Product decisions</span>
-        </button>
-        <button class="jt m-adoption" data-moment="adoption" type="button" role="tab" aria-selected="false">
-          <span class="jt-num"><img src="assets/icons/Growth.png" alt="" /></span>
-          <span class="jt-idx">05</span>
-          <span class="jt-label">Adoption &amp; expansion</span>
-        </button>
-        <button class="jt m-renewal" data-moment="renewal" type="button" role="tab" aria-selected="false">
-          <span class="jt-num"><img src="assets/icons/Direction.png" alt="" /></span>
+          <span class="jt-num"><svg><use href="#i-research"/></svg></span>
           <span class="jt-idx">06</span>
-          <span class="jt-label">Renewal decisions</span>
+          <span class="jt-label">Product research</span>
         </button>
       </div>
     </div>
-
     <div class="journey-panels">
-      <!-- 01 Market Evaluation (cross-cutting) -->
-      <article class="jp m-market" data-panel="market" role="tabpanel">
+      <article class="jp active m-buying" data-panel="winloss" role="tabpanel">
         <div class="jp-text">
-          <div class="jp-icon"><img src="assets/icons/Magnet.png" alt="" /></div>
-          <span class="jp-eyebrow">Market evaluation</span>
-          <h3>Understand how buyers evaluate your category</h3>
-          <p>Map how prospects define the space, who they shortlist, and why. Clozd turns category-level research into a live view of how your market is actually making decisions.</p>
-          <a class="jp-link" href="#">Explore market intelligence <span class="arrow">&rarr;</span></a>
+          <div class="jp-icon"><svg><use href="#i-target"/></svg></div>
+          <span class="jp-eyebrow">Win-loss analysis</span>
+          <h3>Uncover the real reasons you win and lose deals</h3>
+          <p>Every closed deal becomes a source of truth. Clozd interviews your buyers, identifies the decision drivers, and surfaces the insights and patterns your CRM notes and sales call recordings fail to capture.</p>
+          <a class="jp-link" href="#">Explore win-loss analysis <span class="arrow">&rarr;</span></a>
         </div>
         <aside class="jp-visual">
-          <span class="cc-badge">Cross-cutting signal</span>
-          <div class="cc-icon"><img src="assets/icons/Magnet.png" alt="" /></div>
-          <div class="cc-label">Category &amp; competitor intelligence</div>
-          <p class="cc-sub">Evidence from prospects, buyers, and customers &mdash; distilled into a living view of how your market is making decisions.</p>
-        </aside>
-      </article>
-
-      <!-- 02 Buying Decisions — Win-Loss (default open) -->
-      <article class="jp active m-buying" data-panel="buying" role="tabpanel">
-        <div class="jp-text">
-          <div class="jp-icon"><img src="assets/icons/Target.png" alt="" /></div>
-          <span class="jp-eyebrow">Buying decisions</span>
-          <h3>Uncover why buyers chose you &mdash; or a competitor</h3>
-          <p>Every closed deal becomes a source of truth. Clozd interviews buyers, codes the drivers, and surfaces the patterns your CRM and stage notes will never capture.</p>
-          <a class="jp-link" href="#">Explore Win-Loss <span class="arrow">&rarr;</span></a>
-        </div>
-        <aside class="jp-visual">
-          <span class="jp-product-tag">Clozd Product</span>
+          <span class="jp-product-tag">Clozd use case</span>
           <div class="jp-product-wordmark">
-            <img class="jp-product-logo" src="assets/product/win-loss.png" alt="" />
+            <div class="jp-product-logo">W</div>
             <div class="jp-product-name">
               <span class="jp-pn-lockup">Clozd</span>
               <span class="jp-pn-title">Win-Loss</span>
@@ -943,87 +857,104 @@
           <p class="jp-product-sub">The category-leading win-loss program used by revenue teams to understand every deal.</p>
         </aside>
       </article>
-
-      <!-- 03 Implementation Success — Implementation -->
       <article class="jp m-implementation" data-panel="implementation" role="tabpanel">
         <div class="jp-text">
-          <div class="jp-icon"><img src="assets/icons/Rocketship.png" alt="" /></div>
-          <span class="jp-eyebrow">Implementation success</span>
-          <h3>See whether new customers actually reach value</h3>
-          <p>Measure onboarding from the customer&rsquo;s perspective &mdash; not the services ticket. Find the handoffs that quietly erode first-year retention and fix them.</p>
-          <a class="jp-link" href="#">Explore Implementation <span class="arrow">&rarr;</span></a>
+          <div class="jp-icon"><svg><use href="#i-rocket"/></svg></div>
+          <span class="jp-eyebrow">Implementation feedback</span>
+          <h3>Retention begins on day one</h3>
+          <p>By capturing candid feedback early in the relationship, you can see if your new customers are actually realizing value, where you fell short of expectations, and what needs to change before small issues grow into larger problems.</p>
+          <a class="jp-link" href="#">Explore implementation feedback <span class="arrow">&rarr;</span></a>
         </div>
         <aside class="jp-visual">
-          <span class="jp-product-tag">Clozd Product</span>
+          <span class="jp-product-tag">Clozd use case</span>
           <div class="jp-product-wordmark">
-            <img class="jp-product-logo" src="assets/product/implementation.png" alt="" />
+            <div class="jp-product-logo">I</div>
             <div class="jp-product-name">
               <span class="jp-pn-lockup">Clozd</span>
               <span class="jp-pn-title">Implementation</span>
             </div>
           </div>
-          <p class="jp-product-sub">Post-implementation interviews tied directly to first-year retention and expansion signals.</p>
+          <p class="jp-product-sub">Onboarding interviews captured early&mdash;before small issues compound into churn risk.</p>
         </aside>
       </article>
-
-      <!-- 04 Product Decisions (cross-cutting) -->
+      <article class="jp m-adoption" data-panel="cx" role="tabpanel">
+        <div class="jp-text">
+          <div class="jp-icon"><svg><use href="#i-growth"/></svg></div>
+          <span class="jp-eyebrow">CX check-ins</span>
+          <h3>Feedback that fuels great experiences</h3>
+          <p>Customer experience is a direct driver of retention, expansion, and brand advocacy. Poor experiences compound silently across touchpoints, while exceptional experiences create momentum.</p>
+          <a class="jp-link" href="#">Explore CX check-ins <span class="arrow">&rarr;</span></a>
+        </div>
+        <aside class="jp-visual">
+          <span class="jp-product-tag">Clozd use case</span>
+          <div class="jp-product-wordmark">
+            <div class="jp-product-logo">C</div>
+            <div class="jp-product-name">
+              <span class="jp-pn-lockup">Clozd</span>
+              <span class="jp-pn-title">CX Check-ins</span>
+            </div>
+          </div>
+          <p class="jp-product-sub">Always-on customer experience signal tied to retention, expansion, and advocacy.</p>
+        </aside>
+      </article>
+      <article class="jp m-renewal" data-panel="churn" role="tabpanel">
+        <div class="jp-text">
+          <div class="jp-icon"><svg><use href="#i-direction"/></svg></div>
+          <span class="jp-eyebrow">Churn interviews</span>
+          <h3>Eliminate the high cost of customer attrition</h3>
+          <p>Interviews with churned customers create a feedback loop that extends beyond renewal itself. Even when a customer chooses to leave, understanding why they churn provides critical insights into what went wrong&mdash;and how similar revenue can be protected in the future.</p>
+          <a class="jp-link" href="#">Explore churn interviews <span class="arrow">&rarr;</span></a>
+        </div>
+        <aside class="jp-visual">
+          <span class="jp-product-tag">Clozd use case</span>
+          <div class="jp-product-wordmark">
+            <div class="jp-product-logo mono-2">Ch</div>
+            <div class="jp-product-name">
+              <span class="jp-pn-lockup">Clozd</span>
+              <span class="jp-pn-title">Churn</span>
+            </div>
+          </div>
+          <p class="jp-product-sub">Interviews with churned customers&mdash;so what cost you one account doesn&rsquo;t cost you the next ten.</p>
+        </aside>
+      </article>
+      <article class="jp m-market" data-panel="market" role="tabpanel">
+        <div class="jp-text">
+          <div class="jp-icon"><svg><use href="#i-magnet"/></svg></div>
+          <span class="jp-eyebrow">Market research</span>
+          <h3>Enter new markets with confidence</h3>
+          <p>Static research can provide a snapshot, but markets don&rsquo;t stand still&mdash;and neither do your buyers. Capture real-time buyer feedback to understand evolving demand, uncover new opportunities, and position yourself to win.</p>
+          <a class="jp-link" href="#">Explore market research <span class="arrow">&rarr;</span></a>
+        </div>
+        <aside class="jp-visual">
+          <span class="jp-product-tag">Clozd use case</span>
+          <div class="jp-product-wordmark">
+            <div class="jp-product-logo">M</div>
+            <div class="jp-product-name">
+              <span class="jp-pn-lockup">Clozd</span>
+              <span class="jp-pn-title">Market Research</span>
+            </div>
+          </div>
+          <p class="jp-product-sub">Live category and buyer research that keeps pace with how your market actually moves.</p>
+        </aside>
+      </article>
       <article class="jp m-product-dec" data-panel="product" role="tabpanel">
         <div class="jp-text">
-          <div class="jp-icon"><img src="assets/icons/Streamline.png" alt="" /></div>
-          <span class="jp-eyebrow">Product decisions</span>
-          <h3>Reveal which capabilities truly influence buying and adoption</h3>
-          <p>Close the loop between product roadmap and revenue reality. Clozd feeds unfiltered buyer and user evidence into the prioritization conversations that matter most.</p>
-          <a class="jp-link" href="#">Explore product insights <span class="arrow">&rarr;</span></a>
+          <div class="jp-icon"><svg><use href="#i-research"/></svg></div>
+          <span class="jp-eyebrow">Product research</span>
+          <h3>Identify which features actually drive buying and adoption</h3>
+          <p>Some of the most expensive product decisions are driven by incomplete information. Candid feedback helps you align product investments with real customer needs&mdash;and uncover missed opportunities.</p>
+          <a class="jp-link" href="#">Explore product research <span class="arrow">&rarr;</span></a>
         </div>
         <aside class="jp-visual">
-          <span class="cc-badge">Cross-cutting signal</span>
-          <div class="cc-icon"><img src="assets/icons/Streamline.png" alt="" /></div>
-          <div class="cc-label">Feature &amp; roadmap evidence</div>
-          <p class="cc-sub">Feature gaps, parity, and jobs-to-be-done surfaced from every Clozd interview &mdash; routed straight to product.</p>
-        </aside>
-      </article>
-
-      <!-- 05 Adoption & Expansion — CX (CSAT) -->
-      <article class="jp m-adoption" data-panel="adoption" role="tabpanel">
-        <div class="jp-text">
-          <div class="jp-icon"><img src="assets/icons/Growth.png" alt="" /></div>
-          <span class="jp-eyebrow">Adoption &amp; expansion</span>
-          <h3>Know what drives deeper usage &mdash; or disengagement</h3>
-          <p>Always-on CX and voice-of-customer programs that tie day-to-day feedback to the drivers of expansion, champion advocacy, and account growth.</p>
-          <a class="jp-link" href="#">Explore CX <span class="arrow">&rarr;</span></a>
-        </div>
-        <aside class="jp-visual">
-          <span class="jp-product-tag">Clozd Product</span>
+          <span class="jp-product-tag">Clozd use case</span>
           <div class="jp-product-wordmark">
-            <img class="jp-product-logo" src="assets/product/cx.png" alt="" />
+            <div class="jp-product-logo">P</div>
             <div class="jp-product-name">
               <span class="jp-pn-lockup">Clozd</span>
-              <span class="jp-pn-title">Customer Experience</span>
+              <span class="jp-pn-title">Product Research</span>
             </div>
           </div>
-          <p class="jp-product-sub">CSAT, NPS, and qualitative VoC programs linked to expansion, advocacy, and account growth.</p>
-        </aside>
-      </article>
-
-      <!-- 06 Renewal Decisions — Retention -->
-      <article class="jp m-renewal" data-panel="renewal" role="tabpanel">
-        <div class="jp-text">
-          <div class="jp-icon"><img src="assets/icons/Direction.png" alt="" /></div>
-          <span class="jp-eyebrow">Renewal decisions</span>
-          <h3>Get ahead of churn with honest customer feedback</h3>
-          <p>Structured renewal, expansion, and churn interviews tell you which accounts are at risk &mdash; and exactly why &mdash; so CS, product, and revenue can move before the renewal meeting.</p>
-          <a class="jp-link" href="#">Explore Retention <span class="arrow">&rarr;</span></a>
-        </div>
-        <aside class="jp-visual">
-          <span class="jp-product-tag">Clozd Product</span>
-          <div class="jp-product-wordmark">
-            <img class="jp-product-logo" src="assets/product/retention.png" alt="" />
-            <div class="jp-product-name">
-              <span class="jp-pn-lockup">Clozd</span>
-              <span class="jp-pn-title">Retention</span>
-            </div>
-          </div>
-          <p class="jp-product-sub">Churn, renewal, and expansion interviews delivered well before the renewal window opens.</p>
+          <p class="jp-product-sub">Buyer- and user-grounded evidence on which features earn deals and drive adoption.</p>
         </aside>
       </article>
     </div>
@@ -1034,15 +965,14 @@
 <section class="personas">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow on-dark">One truth layer. Every GTM leader.</span>
-      <h2 style="margin-top:14px">The truth behind every customer decision &mdash; in <span class="light">every GTM leader&rsquo;s</span> hands</h2>
-      <p class="lede" style="margin-top:18px">Clozd is the decision intelligence engine for go-to-market teams. We capture candid customer feedback at the moments that matter across the journey &mdash; so CROs, CMOs, CS leaders, and PMMs (and the AI agents they deploy) make decisions grounded in reality, not assumptions.</p>
+      <span class="eyebrow on-dark">Built for revenue leaders</span>
+      <h2 style="margin-top:14px">One source of truth <span class="light">for every team</span></h2>
+      <p class="lede" style="margin-top:18px">Clozd gives every leader access to real customer insights&mdash;so GTM teams can align, act, and lead based on verified truth, not opinions or assumptions.</p>
     </div>
-
     <div class="reel" role="list">
-      <!-- CRO: Shane Evans, Gong -->
       <button class="vclip cro" role="listitem" type="button" data-vclip="cro"
-        data-quote="Clozd is the only place I go for a clean read on why we&rsquo;re really winning and losing. It&rsquo;s in every board deck and every forecast call."
+        data-chip="Uncover hidden revenue"
+        data-quote="With Clozd, we&rsquo;re able to be very surgical in how we dive in. When we get to some of these decision points as a company, we&rsquo;re no longer flying blind. We feel like we have a more comprehensive data set to look at."
         data-name="Shane Evans" data-role="Chief Revenue Officer, Gong"
         data-logo-class="gong" data-logo-text="GONG">
         <div class="vposter" aria-hidden="true">
@@ -1056,6 +986,10 @@
         <span class="vplay" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
         </span>
+        <div class="vhead">
+          <span class="vchip">Uncover hidden revenue</span>
+          <p class="vhead-line">By pairing conversational data with candid buyer feedback, Gong&rsquo;s CRO uncovered hidden revenue opportunities.</p>
+        </div>
         <div class="vfoot">
           <div class="vleft">
             <div class="vname">Shane Evans</div>
@@ -1064,11 +998,10 @@
           <span class="vlogo gong">GONG</span>
         </div>
       </button>
-
-      <!-- CMO: Craig Clark, Nitrogen -->
       <button class="vclip cmo" role="listitem" type="button" data-vclip="cmo"
-        data-quote="We re-wrote our entire messaging strategy after the first 50 Clozd interviews. Nothing else gives you the buyer&rsquo;s voice this clean."
-        data-name="Craig Clark" data-role="Chief Marketing Officer, Nitrogen"
+        data-chip="Improve brand recognition"
+        data-quote="The Clozd interviews were just an absolutely smoking gun&mdash;and they led to a big change as we actually rebranded the whole company. We clearly struck a chord there, and the volume of that product is way up."
+        data-name="Craig Clark" data-role="Chief Growth Officer, Nitrogen"
         data-logo-class="nitrogen" data-logo-text="nitrogen">
         <div class="vposter" aria-hidden="true">
           <svg class="vportrait" viewBox="0 0 200 260" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
@@ -1082,19 +1015,22 @@
         <span class="vplay" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
         </span>
+        <div class="vhead">
+          <span class="vchip">Improve brand recognition</span>
+          <p class="vhead-line">Nitrogen used Clozd interviews to validate a brand-perception problem&mdash;and rebranded to better match what their buyers actually wanted.</p>
+        </div>
         <div class="vfoot">
           <div class="vleft">
             <div class="vname">Craig Clark</div>
-            <span class="vrole">Chief Marketing Officer</span>
+            <span class="vrole">Chief Growth Officer</span>
           </div>
           <span class="vlogo nitrogen">Nitrogen</span>
         </div>
       </button>
-
-      <!-- SVP CS: Spencer Eriksson, Reputation -->
       <button class="vclip cs" role="listitem" type="button" data-vclip="cs"
-        data-quote="Churn risk used to show up in the renewal meeting. With Clozd we see it 90 days out, in the customer&rsquo;s own words, with a specific play to run."
-        data-name="Spencer Eriksson" data-role="VP Customer Success, Reputation"
+        data-chip="Boost retention"
+        data-quote="The visibility we get from Clozd would be difficult to re-create any other way. And the very first customer we were able to save because of the feedback we got through Clozd covers the entire cost of the contract."
+        data-name="Spencer Eriksson" data-role="VP of Customer Success, Reputation"
         data-logo-class="reputation" data-logo-text="Reputation">
         <div class="vposter" aria-hidden="true">
           <svg class="vportrait" viewBox="0 0 200 260" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
@@ -1107,43 +1043,20 @@
         <span class="vplay" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
         </span>
+        <div class="vhead">
+          <span class="vchip">Boost retention</span>
+          <p class="vhead-line">Reputation&rsquo;s CS team used honest customer feedback to uncover hidden risks, build stronger renewal strategies, and eliminate &ldquo;surprise churn.&rdquo;</p>
+        </div>
         <div class="vfoot">
           <div class="vleft">
             <div class="vname">Spencer Eriksson</div>
-            <span class="vrole">VP Customer Success</span>
+            <span class="vrole">VP of Customer Success</span>
           </div>
           <span class="vlogo reputation">Reputation</span>
         </div>
       </button>
-
-      <!-- VP PMM: Matt Nelson, AuditBoard -->
-      <button class="vclip pmm" role="listitem" type="button" data-vclip="pmm"
-        data-quote="Clozd helped us boost win rate by 5%. Every battlecard, every QBR, every launch is grounded in what buyers actually said."
-        data-name="Matt Nelson" data-role="VP Product Marketing, AuditBoard"
-        data-logo-class="auditboard" data-logo-text="AuditBoard">
-        <div class="vposter" aria-hidden="true">
-          <svg class="vportrait" viewBox="0 0 200 260" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
-            <defs><linearGradient id="pg-pmm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".98"/><stop offset="1" stop-color="#F0F4FA" stop-opacity=".76"/></linearGradient></defs>
-            <circle cx="100" cy="96" r="45" fill="url(#pg-pmm)"/>
-            <path d="M10,260 C12,202 44,166 100,166 C156,166 188,202 190,260 Z" fill="url(#pg-pmm)"/>
-            <path d="M78,118 Q100,132 122,118" stroke="rgba(0,0,0,.18)" stroke-width="2" fill="none" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <span class="vplay" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-        </span>
-        <div class="vfoot">
-          <div class="vleft">
-            <div class="vname">Matt Nelson</div>
-            <span class="vrole">VP Product Marketing</span>
-          </div>
-          <span class="vlogo auditboard">AuditBoard</span>
-        </div>
-      </button>
     </div>
   </div>
-
-  <!-- Lightbox modal -->
   <div class="vbox" id="vbox" role="dialog" aria-modal="true" aria-hidden="true">
     <div class="vbox-card">
       <button class="vbox-close" type="button" aria-label="Close" id="vboxClose">
@@ -1162,6 +1075,7 @@
         </span>
       </div>
       <div class="vbox-cap">
+        <span class="vbchip" id="vboxChip"></span>
         <p class="vbq" id="vboxQuote"></p>
         <div class="vbfoot">
           <div class="vbleft">
@@ -1175,82 +1089,26 @@
   </div>
 </section>
 
-<!-- ============== ENGINE (the feedback engine) ============== -->
-<section class="section engine">
+<!-- ============== G2 ============== -->
+<section class="section g2">
   <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">The feedback engine</span>
-      <h2 style="margin-top:14px">Collect. Analyze. <span class="light">Activate.</span></h2>
-      <p class="lede" style="margin-top:18px">One platform that runs the full decision-intelligence loop &mdash; from the first buyer conversation to the driver that shows up in the CRO&rsquo;s board deck. No more quarterly research that dies in a slide, no more themes that get lost between interviews and action.</p>
-    </div>
-
-    <div class="engine-grid">
-      <div class="step">
-        <div class="num">1</div>
-        <img src="assets/icons/Magnet.png" alt="" />
-        <h3>Collect real conversations</h3>
-        <p>Mix the right method for the right question &mdash; AI-led interviews for volume, expert-led interviews for depth, surveys for breadth.</p>
-        <ul>
-          <li>Adaptive AI interviewers trained on your market</li>
-          <li>Senior human interviewers for strategic deals</li>
-          <li>Pulled directly from your CRM on close</li>
-        </ul>
+    <div class="g2-grid">
+      <div class="g2-left">
+        <span class="g2-badge"><span class="g2-mark">G2</span><span class="g2-label">Crowd</span></span>
+        <span class="eyebrow" style="display:block;margin-bottom:8px">Industry-leading solutions</span>
+        <h2>The #1 win-loss platform on G2</h2>
+        <p class="lede" style="margin-top:18px">Clozd is consistently ranked as the best win-loss solution for ROI, ease of use, and quality of support&mdash;by the revenue leaders who use our platform every day.</p>
       </div>
-      <div class="step">
-        <div class="num">2</div>
-        <img src="assets/icons/Research .png" alt="" />
-        <h3>Analyze with structure</h3>
-        <p>Every conversation is coded against your drivers, segments, competitors, and products &mdash; not generic sentiment tags.</p>
-        <ul>
-          <li>Tailored driver taxonomy per business</li>
-          <li>AI structuring + analyst review on every interview</li>
-          <li>Trends surface across segment, quarter, and rep</li>
-        </ul>
-      </div>
-      <div class="step">
-        <div class="num">3</div>
-        <img src="assets/icons/Rocketship.png" alt="" />
-        <h3>Activate across the team</h3>
-        <p>Insights route to the tools and people who can act on them &mdash; so feedback actually changes the next quarter.</p>
-        <ul>
-          <li>Dashboards for CRO, PMM, CS, and product</li>
-          <li>Pushes to Salesforce, Gong, Slack, Snowflake</li>
-          <li>Custom programs run by a dedicated analyst</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============== SOCIAL PROOF ============== -->
-<section class="section proof-section">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">The Clozd footprint</span>
-      <h2 style="margin-top:14px">The feedback engine trusted by <span class="light">500+ revenue teams</span> around the world</h2>
-      <p class="lede" style="margin-top:18px">Five hundred GTM teams. Fifty thousand buyer and customer interviews. One hundred and twenty countries. And a 4.8 G2 rating from the leaders running the program.</p>
-    </div>
-    <div class="proof-grid" style="margin-top:56px">
-      <div class="proof-card">
-        <span class="tag">G2 Leader</span>
-        <div class="big">4.8</div>
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <div class="lbl">Win-Loss Analysis &middot; Category leader</div>
-      </div>
-      <div class="proof-card">
-        <span class="tag">Scale</span>
-        <div class="big">50,000<span class="plus">+</span></div>
-        <div class="lbl">Buyer interviews conducted for GTM teams worldwide</div>
-      </div>
-      <div class="proof-card">
-        <span class="tag">Reach</span>
-        <div class="big">120<span class="plus">+</span></div>
-        <div class="lbl">Countries where Clozd has captured decision intelligence</div>
-      </div>
-      <div class="proof-card">
-        <span class="tag">Trust</span>
-        <div class="big">500<span class="plus">+</span></div>
-        <div class="lbl">Revenue teams using Clozd to understand the &lsquo;why&rsquo; behind every decision</div>
+      <div class="g2-quote-card">
+        <div class="g2-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>&ldquo;If you want data-driven insights to fuel your strategy, Clozd is a no-brainer. The upfront investment is quickly dwarfed by the immense value it brings in the form of actionable intelligence and competitive advantage.&rdquo;</blockquote>
+        <div class="g2-attr">
+          <div class="g2-avatar">DB</div>
+          <div>
+            <div class="g2-name">Dan Bolton</div>
+            <div class="g2-role">Vice President of Corporate Marketing, Nitrogen</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -1264,7 +1122,7 @@
       <h2 style="margin-top:14px">Bring your hardest <span class="light">"why did we lose that?"</span> and we'll show you the answer</h2>
       <p>30 minutes with a Clozd strategist. Leave with a tailored walkthrough of how your team's drivers would show up in the platform.</p>
       <div class="btns">
-        <a class="btn btn-light" href="#">Talk to our team →</a>
+        <a class="btn btn-light" href="#">Talk to our team &rarr;</a>
         <a class="btn btn-ghost" href="#">Download the buyer's guide</a>
       </div>
     </div>
@@ -1276,8 +1134,8 @@
   <div class="wrap">
     <div class="top">
       <div>
-        <img class="foot-logo" src="assets/logos/clozd-logo.svg" alt="Clozd" />
-        <p class="tagline">The customer feedback engine for revenue teams. Turn every deal and customer into evidence — at scale, without the spreadsheets.</p>
+        <span class="foot-logo">clozd</span>
+        <p class="tagline">The customer feedback engine for revenue teams. Turn every deal and customer into evidence &mdash; at scale, without the spreadsheets.</p>
       </div>
       <div class="cols">
         <div>
@@ -1319,8 +1177,8 @@
       </div>
     </div>
     <div class="bottom">
-      <div>© 2026 Clozd, Inc. · All rights reserved</div>
-      <div>Privacy · Terms · Trust</div>
+      <div>&copy; 2026 Clozd, Inc. &middot; All rights reserved</div>
+      <div>Privacy &middot; Terms &middot; Trust</div>
     </div>
   </div>
 </footer>
@@ -1329,10 +1187,10 @@
   (function(){
     var stories = {
       stackadapt: {
-        tag: 'Featured outcome · Win-back pipeline',
+        tag: 'Win back revenue',
         stat: '60',
         unit: '%',
-        desc: 'of closed-lost deals re-qualified as genuine win-back opportunities after Decision Intelligence surfaced the real reasons buyers went another direction',
+        desc: 'StackAdapt’s revenue team found that <strong>60%</strong> of their loss interviews included clear signals for future re-engagement.',
         mark: 'S',
         markGrad: 'linear-gradient(135deg,#274FDB,#09D4C8)',
         name: 'StackAdapt',
@@ -1341,10 +1199,10 @@
         media: '<div class="video-wrap"><iframe src="https://player.vimeo.com/video/1171100831?title=0&amp;byline=0&amp;portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="StackAdapt case study"></iframe></div>'
       },
       zoovu: {
-        tag: 'Featured outcome · Conversion',
+        tag: 'Boost sales conversion rate',
         stat: '2.5',
-        unit: '\u00D7',
-        desc: 'increase in late-stage pipeline conversion after running Decision Intelligence continuously across their GTM motion',
+        unit: '×',
+        desc: 'When new-business acquisition faltered, Zoovu used buyer insights to guide their strategy—and improved their sales conversion rate by <strong>2.5×</strong>.',
         mark: 'Z',
         markGrad: 'linear-gradient(135deg,#09D4C8,#14A6F8)',
         name: 'Zoovu',
@@ -1359,37 +1217,35 @@
               '<div class="stage s3"><span>Commit</span><span>56%</span></div>',
               '<div class="stage s4"><span>Closed-won</span><span>40%</span></div>',
             '</div>',
-            '<span class="lift"><span class="arrow">\u25B2</span> 2.5\u00D7 vs. prior baseline</span>',
+            '<span class="lift"><span class="arrow">▲</span> 2.5× vs. prior baseline</span>',
           '</div>'
         ].join('')
       },
       optro: {
-        tag: 'Featured outcome · Win rate',
+        tag: 'Increase win rate',
         stat: '+5',
-        unit: '%',
-        desc: 'lift in overall win rate within the first 12 months of running continuous win-loss feedback through Clozd',
+        unit: 'pts',
+        desc: 'Optro dug into why they were losing deals—and then used those insights to boost their win rate by <strong>5 percentage points</strong>.',
         mark: 'O',
         markGrad: 'linear-gradient(135deg,#14A6F8,#274FDB)',
         name: 'Optro',
         co: 'Defense-tech workforce platform',
-        linkText: 'Read the story',
+        linkText: 'Watch the story',
         media: [
-          '<div class="viz viz-drivers">',
-            '<div class="viz-head"><span class="dot"></span>Top reasons buyers chose Optro</div>',
-            '<div class="rows">',
-              '<div class="row"><span class="t">Mission fit</span><div class="track"><div class="fill" style="width:88%"></div></div><span class="v">88%</span></div>',
-              '<div class="row"><span class="t">Data security</span><div class="track"><div class="fill" style="width:74%"></div></div><span class="v">74%</span></div>',
-              '<div class="row"><span class="t">Integration depth</span><div class="track"><div class="fill" style="width:61%"></div></div><span class="v">61%</span></div>',
-              '<div class="row dim"><span class="t">Price</span><div class="track"><div class="fill" style="width:34%"></div></div><span class="v">34%</span></div>',
+          '<div class="video-wrap video-placeholder">',
+            '<div class="vp-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>',
+            '<div class="vp-foot">',
+              '<span>Customer story</span>',
+              '<span class="vp-soon">Coming soon</span>',
             '</div>',
           '</div>'
         ].join('')
       },
       clearbit: {
-        tag: 'Featured outcome · Retention',
+        tag: 'Retain more customers',
         stat: '+10',
         unit: '%',
-        desc: 'improvement in gross revenue retention year over year after listening systematically to churned and at-risk accounts',
+        desc: 'Clearbit increased gross retention by <strong>10%</strong> after listening to real customer feedback and making the right product changes.',
         mark: 'C',
         markGrad: 'linear-gradient(135deg,#1A2FA0,#274FDB)',
         name: 'Clearbit',
@@ -1415,16 +1271,13 @@
               '<circle cx="0" cy="92" r="3.5" fill="#274FDB"/>',
               '<circle cx="300" cy="18" r="5.5" fill="#09D4C8" stroke="#fff" stroke-width="2"/>',
             '</svg>',
-            '<div class="trend-foot"><span>Q1 \u201924</span><span class="delta">+10 pts</span><span>Q4 \u201925</span></div>',
+            '<div class="trend-foot"><span>Q1 ’24</span><span class="delta">+10 pts</span><span>Q4 ’25</span></div>',
           '</div>'
         ].join('')
       }
     };
-
     var featured = document.getElementById('featuredCard');
     var ofTag = document.getElementById('ofTag');
-    var ofStat = document.getElementById('ofStat');
-    var ofUnit = document.getElementById('ofUnit');
     var ofDesc = document.getElementById('ofDesc');
     var ofMedia = document.getElementById('ofMedia');
     var ofMark = document.getElementById('ofMark');
@@ -1432,14 +1285,11 @@
     var ofCo = document.getElementById('ofCo');
     var ofLink = featured && featured.querySelector('.of-logo .link');
     var buttons = document.querySelectorAll('.di-bento .os');
-
     function loadStory(key){
       var s = stories[key];
       if(!s) return;
       ofTag.textContent = s.tag;
-      ofStat.textContent = s.stat;
-      ofUnit.textContent = s.unit;
-      ofDesc.textContent = s.desc;
+      ofDesc.innerHTML = s.desc;
       ofMedia.innerHTML = s.media;
       ofMark.textContent = s.mark;
       ofMark.style.background = s.markGrad;
@@ -1453,7 +1303,6 @@
         b.setAttribute('aria-selected', active ? 'true' : 'false');
       }
     }
-
     for(var i=0;i<buttons.length;i++){
       (function(btn){
         btn.addEventListener('click', function(){ loadStory(btn.getAttribute('data-story')); });
@@ -1461,23 +1310,26 @@
     }
   })();
 
-  /* ---------- Persona video reel lightbox ---------- */
   (function(){
     var box = document.getElementById('vbox');
     if(!box) return;
     var boxVideo = document.getElementById('vboxVideo');
+    var boxChip  = document.getElementById('vboxChip');
     var boxQuote = document.getElementById('vboxQuote');
     var boxName  = document.getElementById('vboxName');
     var boxRole  = document.getElementById('vboxRole');
     var boxLogo  = document.getElementById('vboxLogo');
     var boxClose = document.getElementById('vboxClose');
-
     function open(card){
       var role = card.getAttribute('data-vclip') || '';
       var logoClass = card.getAttribute('data-logo-class') || '';
       var logoText  = card.getAttribute('data-logo-text') || '';
-      // Match poster look to the clicked card's class for color consistency
+      var chipText  = card.getAttribute('data-chip') || '';
       boxVideo.className = 'vbox-video ' + role;
+      if(boxChip){
+        boxChip.textContent = chipText;
+        boxChip.style.display = chipText ? '' : 'none';
+      }
       boxQuote.textContent = card.getAttribute('data-quote') || '';
       boxName.textContent = card.getAttribute('data-name') || '';
       boxRole.textContent = card.getAttribute('data-role') || '';
@@ -1501,7 +1353,6 @@
     document.addEventListener('keydown', function(e){ if(e.key === 'Escape') close(); });
   })();
 
-  /* ---------- Customer journey tab switcher ---------- */
   (function(){
     var tabs = document.querySelectorAll('.journey-tabs .jt');
     var panels = document.querySelectorAll('.journey-panels .jp');
@@ -1524,6 +1375,5 @@
     }
   })();
 </script>
-
 </body>
 </html>
